@@ -5,3 +5,19 @@ console.log(nameValue)
 
 let url:string = "www.google.com"
 console.log(url)
+
+//DATA TYPES
+
+let course: string = "Motivus"
+console.log(course)
+
+let nameVal: string = "Typescript"
+let description: string = nameVal + " is working"
+console.log(nameVal)
+console.log(description)
+
+let count:number = 9
+console.log(count)
+
+let isVisible:boolean = true
+console.log(isVisible)
