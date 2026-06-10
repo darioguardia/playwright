@@ -67,7 +67,7 @@ test("GetBy methods practice",async({page})=>{
 
     //GetBy -> FORM fills
     await page.getByLabel("Dirección de email").fill("rimuu48@gmail.com")
-    await page.locator("//input[@type='password']").fill("D1s7urb3dd@@@!#")
+    await page.locator("//input[@type='password']").fill("testing")
     console.log(await page.getByText("¿Olvidaste tu contraseña?",{exact:true}).textContent())
     await logIn(page)
     await page.getByAltText("Sauce Labs Backpack").click()

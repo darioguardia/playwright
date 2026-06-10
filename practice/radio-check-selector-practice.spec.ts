@@ -44,3 +44,10 @@ test("Dropdown Practice",async({page})=>{
     // // await page.frameLocator("iframe[name='iframeResult']").getByLabel('Choose a car:').selectOption({label:"Audi (Auto Union Deutschland Ingolstadt)"}) //since the label value is present on the code of the page and not in the front of the page, it will not select
 
 })
+
+test("Dropdown Multiple Practice",async({page})=>{
+
+    await page.goto("https://demoqa.com/select-menu")
+    await page.locator("//select[@id='cars']").selectOption(['Opel','Audi','Volvo'])
+  
+})
