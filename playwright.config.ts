@@ -12,6 +12,7 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
+  //grep: /UI/, //config to run test with tag UI
   // globalSetup: "./global-setup.ts",
   testDir: './tests',
   /* Run tests in files in parallel */
