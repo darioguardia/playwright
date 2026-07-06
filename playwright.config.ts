@@ -1,11 +1,15 @@
 import { defineConfig, devices } from '@playwright/test';
 import { access } from 'node:fs';
+import dotenv from "dotenv"
 
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
 // import dotenv from 'dotenv';
+dotenv.config({
+  path: process.env.TEST_ENV ? `./env-files/.env.${process.env.TEST_ENV}` : `./env-files/.env.dev`
+})
 // import path from 'path';
 // dotenv.config({ path: path.resolve(__dirname, '.env') });
 
@@ -25,7 +29,7 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined, //this is to run tests in sequence on CI, change undefined to 2 or more to run in parallel 
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [['html',{open:'always'}]],
+  reporter: [['html',{open:'always'}],['github']],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {  
     /* Base URL to use in actions like `await page.goto('')`. */
@@ -41,7 +45,7 @@ export default defineConfig({
     video:'retain-on-failure',
     testIdAttribute: 'data-test',
     trace: 'on',
-    headless: false,
+    headless: true,
     // storageState: "./playwright/.auth/auth.json",
   },
   timeout: 30000,
