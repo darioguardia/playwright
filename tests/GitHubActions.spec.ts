@@ -60,3 +60,11 @@ test("Practice Test 7", async({page})=>{
     expect(page).toHaveTitle("Swag Labs")
     console.log("Ending Practice Test 7")
 })
+
+test("Practice Test 8", async({page})=>{ 
+    console.log("Starting Practice Test 8")
+    await page.goto("https://www.saucedemo.com/")
+    console.log(await page.title())
+    expect(page).toHaveTitle("Swag Labs")
+    console.log("Ending Practice Test 8")
+})
