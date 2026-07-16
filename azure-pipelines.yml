@@ -3,8 +3,16 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
-- main
+#trigger:
+#- main
+
+schedules:
+  - cron: "40 2 * * *"
+    displayName: "Daily 2:40 AM Pipeline Trigger"
+    branches:
+     include:
+       - main
+    always: true
 
 pool:
   vmImage: ubuntu-latest
