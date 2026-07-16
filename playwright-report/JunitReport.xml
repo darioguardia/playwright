@@ -1,0 +1,16 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="1.803779">
+<testsuite name="GitHubActions.spec.ts" timestamp="2026-07-16T00:39:26.091Z" hostname="chromium" tests="1" failures="0" skipped="0" time="0.545" errors="0">
+<testcase name="Practice Test 1 @UAT" classname="GitHubActions.spec.ts" time="0.545">
+<system-out>
+<![CDATA[Starting Practice Test 1
+Swag Labs
+Ending Practice Test 1
+
+[[ATTACHMENT|..\test-results\GitHubActions-Practice-Test-1-UAT-chromium\test-finished-1.png]]
+
+[[ATTACHMENT|..\test-results\GitHubActions-Practice-Test-1-UAT-chromium\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

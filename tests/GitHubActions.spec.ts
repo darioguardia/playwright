@@ -1,6 +1,6 @@
 import {test,expect} from "@playwright/test"
 
-test("Practice Test 1", async({page})=>{ 
+test("Practice Test 1 @UAT", async({page})=>{ 
     console.log("Starting Practice Test 1")
     await page.goto("https://www.saucedemo.com/")
     console.log(await page.title())
