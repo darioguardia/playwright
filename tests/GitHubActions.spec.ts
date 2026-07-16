@@ -17,7 +17,7 @@ test("Practice Test 2", async({page})=>{
 })
 
 test("Practice Test 3", async({page})=>{ 
-    console.log("Starting Practice Test 3")
+    console.log("Starting Practice Test 3 TEST")
     await page.goto("https://www.saucedemo.com/")
     console.log(await page.title())
     expect(page).toHaveTitle("Swag Labs")
