@@ -21,7 +21,7 @@ steps:
 - script: npx playwright install --with-deps
   displayName: 'Install playwright browsers'
 
-- script: npx playwright test
+- script: npx playwright test --project=$(browser) --grep=$(tagName)
   displayName: 'Running Tests...'
 
 - task: PublishPipelineArtifact@1
